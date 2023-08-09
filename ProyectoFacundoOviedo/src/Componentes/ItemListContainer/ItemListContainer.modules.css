@@ -1,0 +1,9 @@
+.estiloSeccionGreeting{
+    display: flex;
+    color: green; 
+    justify-content: center; 
+    background-color: lightcoral; 
+}
+.estiloGreeting {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
