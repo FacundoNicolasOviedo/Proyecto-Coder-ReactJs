@@ -11,9 +11,9 @@
 .estiloLinks{
     display: flex;
     justify-content: space-between;
-    margin-left: 470px;
+    margin-left: 480px;
     margin-right: 760px;
-    text-decoration: none;
+   
 }
 .estiloLink{
     font-size: 1.5rem;

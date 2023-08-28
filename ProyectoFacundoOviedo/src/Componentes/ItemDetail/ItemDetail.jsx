@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from "prop-types";
+import "./itemDetail.modules.css"
 
 const ItemDetail = ({ item }) => {
     
@@ -13,7 +14,7 @@ const ItemDetail = ({ item }) => {
         
 
         <div>
-            <h1>Descripción del producto</h1>
+            <h1 className='tituloDetail'>Descripción del producto</h1>
             <h1>{item.name}</h1>
             <h2>{item.category}</h2>
             <h2>${item.price}</h2>

@@ -1,6 +1,6 @@
 const products = [
     { id: "1", name: "Aero Pro Drive", price: 35000, category: "Babolat",},
-    { id: "2", name: "Extreme MP", price: 26300, category: "Head" },
+    { id: "2", name: "Extreme MP", price: 26300, category: "Head", image: "/imagenes/ExtremeMP.jpg" },
     { id: "3", name: "Pro Staff v13", price: 25000, category: "Wilson" },
     { id: "4", name: "Speed 2022", price: 30000, category: "Head" },
     { id: "5", name: "Graphene", price: 28000, category: "Head" },

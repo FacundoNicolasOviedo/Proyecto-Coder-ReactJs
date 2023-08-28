@@ -30,6 +30,7 @@ const ItemList = ({ items }) => {
         <ul>
           {items.map((item) => (
             <div className="card col-6 col-md-4 col-lg-3">
+              <img src={item.image} className="card-img-top" alt="" />
               <li key={item.id}>
                 <Link to={`/item/${item.id}`}>
                   <h3>{item.name}</h3>
