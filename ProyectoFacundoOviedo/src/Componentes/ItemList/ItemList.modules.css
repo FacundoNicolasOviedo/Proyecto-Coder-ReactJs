@@ -1,0 +1,20 @@
+.estiloTituloItems{
+    color: rgb(209, 37, 37);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+.card{
+    display: flex;
+    width: 18rem;
+}
+.boton{
+    
+    height: 100%;
+    width: 35px;
+}
+.cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
