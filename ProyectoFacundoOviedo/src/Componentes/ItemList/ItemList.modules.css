@@ -18,3 +18,10 @@
     align-items: center;
     justify-content: center;
 }
+.linksList{
+    color: red;
+    text-align: center;
+}
+.estiloLink{
+    color: rgba(255, 0, 0, 0);
+}

@@ -10,8 +10,7 @@
 }
 .estiloLinks{
     display: flex;
-    justify-content: space-between;
-    margin-left: 480px;
+    margin-left: 470px;
     margin-right: 760px;
    
 }

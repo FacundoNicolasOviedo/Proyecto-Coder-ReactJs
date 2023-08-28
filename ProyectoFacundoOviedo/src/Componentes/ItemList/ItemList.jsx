@@ -26,13 +26,14 @@ const ItemList = ({ items }) => {
   return (
     <div>
       <h1 className="estiloTituloItems">Productos</h1>
-      <div className="row">
+      <div className="card container-fluid">
         <ul>
           {items.map((item) => (
             <div className="card col-6 col-md-4 col-lg-3">
-              <img src={item.image} className="card-img-top" alt="" />
-              <li key={item.id}>
-                <Link to={`/item/${item.id}`}>
+             
+              <li className="estiloLink" key={item.id}>
+                <Link className="linksList" to={`/item/${item.id}`}>
+                   <img src={item.image} className="card-img-top" alt="" />
                   <h3>{item.name}</h3>
                   <h4>{item.category}</h4>
                   <h4>${item.price}</h4>
