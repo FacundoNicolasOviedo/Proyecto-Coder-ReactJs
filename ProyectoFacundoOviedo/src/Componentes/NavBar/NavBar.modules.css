@@ -6,17 +6,24 @@
     color: black;
     text-decoration: none;
     display: flex;
-    justify-content: baseline;
+    
 }
 .estiloLinks{
     display: flex;
-    margin-left: 470px;
+    margin-left: 460px;
     margin-right: 760px;
    
 }
 .estiloLink{
     font-size: 1.5rem;
     margin-left: 50px;
-    text-decoration: none;
     color: black;
+    
+}
+.estiladoLi{
+    color: black;
+    text-decoration: none;
+    &:hover{
+        color: blue
+    }
 }

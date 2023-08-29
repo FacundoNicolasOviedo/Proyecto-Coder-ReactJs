@@ -11,14 +11,14 @@ const NavBar = () => {
                     <Link className="estiloTitulo" to="/">Tennis Center</Link>
                 </h1>
                 <ul className="estiloLinks">
-                    <li>
-                        <NavLink className="estiloLink" to="/category/Wilson">Wilson</NavLink>
+                    <li className="estiloLink">
+                        <NavLink className="estiladoLi" to="/category/Wilson">Wilson</NavLink>
                     </li>
-                    <li>
-                        <NavLink className="estiloLink" to="/category/Head">Head</NavLink>
+                    <li className="estiloLink">
+                        <NavLink className="estiladoLi" to="/category/Head">Head</NavLink>
                     </li>
-                    <li>
-                        <NavLink className="estiloLink" to="/category/Babolat">Babolat</NavLink>
+                    <li className="estiloLink">
+                        <NavLink className="estiladoLi" to="/category/Babolat">Babolat</NavLink>
                     </li>
                 </ul>
                 <div>
