@@ -26,11 +26,11 @@ const ItemList = ({ items }) => {
   return (
     <div>
       <h1 className="estiloTituloItems">Productos</h1>
-      <div className="card container-fluid">
+      <div className="container-fluid">
         <ul>
           {items.map((item) => (
             <div className="card col-6 col-md-4 col-lg-3">
-             
+
               <li className="estiloLink" key={item.id}>
                 <Link className="linksList" to={`/item/${item.id}`}>
                    <img src={item.image} className="card-img-top" alt="" />

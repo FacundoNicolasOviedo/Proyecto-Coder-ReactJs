@@ -16,7 +16,7 @@ const ItemDetail = ({ item }) => {
 
             <div className="estiloCardDetail card mb-3">
                 <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-md-9">
                         <img src={item.image} className="img-fluid rounded-start" alt="" />
                     </div>
                     <div class="col-md-8">

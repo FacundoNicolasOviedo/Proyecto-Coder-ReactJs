@@ -3,13 +3,13 @@
     text-align: center;
     margin-top: 25px;
     margin-bottom: 80px;
+    text-decoration: underline;
 }
 .card{
     display: flex;
     width: 18rem;
 }
 .boton{
-    
     height: 100%;
     width: 35px;
 }
