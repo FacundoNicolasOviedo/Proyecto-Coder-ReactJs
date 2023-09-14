@@ -1,5 +1,6 @@
 .estiloNavbar{
     display: flex;
+    background-color: rgba(82, 80, 80, 0.267);
 }
 .estiloTitulo{
     font-size: 2.4rem;

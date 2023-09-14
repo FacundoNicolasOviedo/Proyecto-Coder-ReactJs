@@ -3,7 +3,8 @@ import "./ItemList.modules.css"
 import { Link } from "react-router-dom"
 import {useState} from "react"
 
-const ItemList = ({ items }) => {
+
+const ItemList = ({ items, addItem }) => {
   const [count, setCount] = useState(0)
   function aumentar() {
 
@@ -43,7 +44,7 @@ const ItemList = ({ items }) => {
               <button className="boton" onClick={aumentar}>+</button>
               <h2 className="cantidad">{count}</h2>
               <button className="boton" onClick={reducir}>-</button>
-              <button className="btn btn-primary mt-3 mb-2">Agregar al carrito</button>
+              <button onClick={()=> addItem(item, 1)} className="btn btn-primary mt-3 mb-2" >Agregar al carrito</button>
             </div>
           ))}
         </ul>
@@ -55,6 +56,7 @@ const ItemList = ({ items }) => {
 
 ItemList.propTypes = {
   items: propTypes.array.isRequired,
+  addItem: propTypes.func,
 };
 
 export default ItemList

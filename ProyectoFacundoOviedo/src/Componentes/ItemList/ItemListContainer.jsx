@@ -1,10 +1,13 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect, useContext} from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import { getProducts } from "../../Services"
+import CartContext from "../../Context/CartContext"
+
 
 const ItemListContainer = () => {
-
+   
+   const {addItem} = useContext (CartContext);
 
    const [items, setItems] = useState([]);
    const {categoryId} = useParams();
@@ -17,7 +20,7 @@ const ItemListContainer = () => {
    }, [categoryId])
    
 
-   return  <ItemList items={items}/>;
+   return  <ItemList items={items}  addItem={addItem}/>;
    
 }
 

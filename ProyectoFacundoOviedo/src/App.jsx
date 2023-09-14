@@ -3,11 +3,12 @@ import NavBar from "./Componentes/NavBar/NavBar"
 import ItemListContainer from "./Componentes/ItemList/ItemListContainer"
 import ItemDetailContainer from "./Componentes/ItemDetail/ItemDetailContainer"
 import "./app.modules.css"
+import CartProvider from "./Context/CartProvider"
 
 
 function App() {
   return (
-    <div>
+    <CartProvider>
       <div className="estiloDivNavbar">
         <NavBar />
       </div>
@@ -21,7 +22,7 @@ function App() {
         <Route path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
       
-    </div>
+    </CartProvider>
   )
 }
 
