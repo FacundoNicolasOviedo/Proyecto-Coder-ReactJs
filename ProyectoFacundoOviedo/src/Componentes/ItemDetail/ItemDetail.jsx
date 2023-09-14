@@ -21,9 +21,9 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div class="col-md-8">
                         <div className='card-body'>
-                            <h3 className='card-title'>{item.name}</h3>
-                            <h4 className='card-title'>{item.category}</h4>
-                            <p className='card-text'>{item.descripcion}</p>
+                            <h3 className='card-title'>{item.title}</h3>
+                            <h4 className='card-title'>{item.categorId}</h4>
+                            <p className='card-text'>{item.description}</p>
                         </div>
                     </div>
                 </div>

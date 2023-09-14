@@ -33,11 +33,11 @@ const ItemList = ({ items }) => {
 
               <li className="estiloLink" key={item.id}>
                 <Link className="linksList" to={`/item/${item.id}`}>
-                   <img src={item.image} className="card-img-top" alt="" />
-                  <h3>{item.name}</h3>
-                  <h4>{item.category}</h4>
+                   <img src= {item.image} className="card-img-top" alt="" />
+                  <h3>{item.title}</h3>
+                  <h4>{item.categoryId}</h4>
                   <h4>${item.price}</h4>
-
+                  <p>Stock: {item.stock} </p>
                 </Link>
               </li>
               <button className="boton" onClick={aumentar}>+</button>
