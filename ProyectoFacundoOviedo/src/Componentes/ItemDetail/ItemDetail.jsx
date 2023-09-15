@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from "prop-types";
 import "./itemDetail.modules.css"
-import {useState} from "react"
+import ItemCount from "../ItemCount/ItemCount"
+import aumentar from "../ItemCount/ItemCount"
 
 const ItemDetail = ({ item }) => {
 
@@ -24,10 +25,7 @@ const ItemDetail = ({ item }) => {
                             <h3 className='card-title'>{item.title}</h3>
                             <h4 className='card-title'>{item.categorId}</h4>
                             <p className='card-text'>{item.description}</p>
-                            <button className="boton" onClick={aumentar}>+</button>
-                            <h2 className="cantidad">{count}</h2>
-                            <button className="boton" onClick={reducir}>-</button>
-                            <button onClick={() => addItem(item, 1)} className="btn btn-primary mt-3 mb-2" >Agregar al carrito</button>
+                            
                             
                         </div>
                     </div>
