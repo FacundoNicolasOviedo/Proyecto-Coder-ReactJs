@@ -6,13 +6,22 @@ import "./app.modules.css"
 import CartProvider from "./Context/CartProvider"
 
 
+
 function App() {
+
+ 
+
   return (
+
+    
     <CartProvider>
       <div className="estiloDivNavbar">
         <NavBar />
+       
       </div>
 
+
+    
 
 
      

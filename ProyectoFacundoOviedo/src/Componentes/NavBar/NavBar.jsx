@@ -2,7 +2,13 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.modules.css"
 import { Link, NavLink } from "react-router-dom"
 
+
+
 const NavBar = () => {
+    
+
+
+   
     return (
         <div>
             <nav className="estiloNavbar">
@@ -22,7 +28,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div>
-                    <CartWidget />
+                    <CartWidget/>
                 </div>
             </nav>
         </div>

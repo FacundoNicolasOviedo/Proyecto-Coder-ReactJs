@@ -3,7 +3,16 @@ import CartContext from "./CartContext";
 
 
 const CartProvider = ({children}) => {
-    const [cart, setCart] = useState();
+    const [cart, setCart] = useState([]);
+
+    const cantidadTotal = () => {
+        const cantidadTotal = cart.reduce(
+            (total, item) => total + item.cantidad,
+            0
+        );
+
+        return cantidadTotal
+    };
 
 
     const isInCart = (id)=> {
@@ -42,7 +51,7 @@ const CartProvider = ({children}) => {
     };
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, isInCart}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, isInCart, cantidadTotal}}>
             {children}
         </CartContext.Provider>
     );

@@ -34,7 +34,7 @@ const ItemList = ({ items, addItem }) => {
 
               <li className="estiloLink" key={item.id}>
                 <Link className="linksList" to={`/item/${item.id}`}>
-                   <img src= {item.image} className="card-img-top" alt="" />
+                   <img src= {item.imageId} className="card-img-top" alt="" />
                   <h3>{item.title}</h3>
                   <h4>{item.categoryId}</h4>
                   <h4>${item.price}</h4>
@@ -44,7 +44,7 @@ const ItemList = ({ items, addItem }) => {
               <button className="boton" onClick={aumentar}>+</button>
               <h2 className="cantidad">{count}</h2>
               <button className="boton" onClick={reducir}>-</button>
-              <button onClick={()=> addItem(item, 1)} className="btn btn-primary mt-3 mb-2" >Agregar al carrito</button>
+              <button onClick={() => addItem(item, 1)} className="btn btn-primary mt-3 mb-2" >Agregar al carrito</button>
             </div>
           ))}
         </ul>
