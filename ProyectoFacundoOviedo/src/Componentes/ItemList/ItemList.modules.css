@@ -9,19 +9,27 @@
     display: flex;
     width: 18rem;
 }
-.boton{
-    height: 100%;
-    width: 35px;
-}
-.cantidad{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .linksList{
     color: red;
     text-align: center;
 }
 .estiloLink{
     color: rgba(255, 0, 0, 0);
+}
+.estiloPrecio{
+    color: black;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.estiloTitulo{
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    margin-top: 25px;
+}
+.estiloCategoria{
+margin-top: 25px;
+color: black;
+text-align: center;
 }

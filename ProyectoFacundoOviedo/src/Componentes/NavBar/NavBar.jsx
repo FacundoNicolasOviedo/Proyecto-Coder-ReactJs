@@ -14,7 +14,7 @@ const NavBar = () => {
             <nav className="estiloNavbar">
 
                 <h1>
-                    <Link className="estiloTitulo" to="/">Tennis Center</Link>
+                    <Link className="estiloTituloLogo" to="/">Tennis Center</Link>
                 </h1>
                 <ul className="estiloLinks">
                     <li className="estiloLink">

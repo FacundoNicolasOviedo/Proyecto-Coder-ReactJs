@@ -9,3 +9,13 @@
     margin-top: 100px;
     width: 400px;
 }
+.tituloDetalle{
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.imagen{
+    margin-right: 50px;
+}

@@ -13,17 +13,18 @@ const ItemList = ({ items, addItem }) => {
       <div className="container-fluid">
         <ul>
           {items.map((item) => (
-            <div className="card col-6 col-md-4 col-lg-3">
-
-              <li className="estiloLink" key={item.id}>
-                <Link className="linksList" to={`/item/${item.id}`}>
-                   <img src= {item.imageId} className="card-img-top" alt="" />
-                  <h3>{item.title}</h3>
-                  <h4>{item.categoryId}</h4>
-                  <h4>${item.price}</h4>
-                  <p>Stock: {item.stock} </p>
-                </Link>
-              </li>
+            <div className="card">
+              <div className="card-body">
+                <li className="estiloLink" key={item.id}>
+                    <img src={item.imageId} className="card-img-top" alt="" />
+                    <h3 className="estiloTitulo">{item.title}</h3>
+                    <h3 className="estiloCategoria">{item.categoryId}</h3>
+                    <h4 className="estiloPrecio">${item.price}</h4>
+                    <Link className="linksList" to={`/item/${item.id}`}>
+                   <h5>Ver detalle</h5>
+                  </Link>
+                </li>
+              </div>
             </div>
           ))}
         </ul>

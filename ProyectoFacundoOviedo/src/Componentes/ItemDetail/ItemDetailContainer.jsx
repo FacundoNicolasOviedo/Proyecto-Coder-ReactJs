@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProduct } from "../../Services"
 import ItemDetail from "./ItemDetail"
-import CartProvider from '../../Context/CartProvider'
+import { CartContext } from '../../Context/CartProvider'
 
 const ItemDetailContainer = () => {
   const [Item, setItem] = useState(null);
   const { id } = useParams()
 
-  const addItem = useContext(CartProvider)
+  const addItem = useContext(CartContext)
 
   console.log(addItem)
 
@@ -22,8 +22,10 @@ const ItemDetailContainer = () => {
   }, [id])
 
 
+
+
   return (
-    <ItemDetail item={Item} addItem={addItem} />
+    <ItemDetail item={Item} addItem={addItem}  />
   )
 }
 

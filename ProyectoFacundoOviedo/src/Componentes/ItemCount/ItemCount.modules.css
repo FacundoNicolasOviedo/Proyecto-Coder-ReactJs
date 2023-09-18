@@ -1,0 +1,19 @@
+.botonAumentar{
+    height: 100%;
+    width: 35px;
+    
+}
+.botonReducir{
+    height: 100%;
+    width: 35px;
+    margin-left: 150px;
+}
+.cantidad{
+   margin-left: 100px;
+}
+.estiloContador{
+   text-align: center;
+   display: flex;
+   margin-top: 40px;
+   margin-bottom: 15px;
+}

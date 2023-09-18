@@ -21,12 +21,12 @@ const ItemDetail = ({ item }) => {
 
             <div className="estiloCardDetail card mb-3">
                 <div className="row g-0">
-                    <div className="col-md-9">
-                        <img src={item.imageId} className="img-fluid rounded-start" alt="" />
+                    <div className="col-md-3">
+                        <img  src={item.imageId} className="imagen" alt="" />
                     </div>
                     <div class="col-md-8">
                         <div className='card-body'>
-                            <h3 className='card-title'>{item.title}</h3>
+                            <h3 className='tituloDetalle card-title'>{item.title}</h3>
                             <h4 className='card-title'>{item.categorId}</h4>
                             <p className='card-text'>{item.description}</p>
                             <h4>${item.price}</h4>
@@ -44,5 +44,6 @@ const ItemDetail = ({ item }) => {
 
 ItemDetail.propTypes = {
     item: PropTypes.object,
+    
 }
 export default ItemDetail
