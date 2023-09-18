@@ -7,6 +7,10 @@ import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({ item }) => {
 
+
+    const itemOnCart{
+        addItem
+    }
     
    
 
@@ -21,7 +25,7 @@ const ItemDetail = ({ item }) => {
 
             <div className="estiloCardDetail card mb-3">
                 <div className="row g-0">
-                    <div className="col-md-3">
+                    <div className="col-md-12">
                         <img  src={item.imageId} className="imagen" alt="" />
                     </div>
                     <div class="col-md-8">
@@ -30,7 +34,7 @@ const ItemDetail = ({ item }) => {
                             <h4 className='card-title'>{item.categorId}</h4>
                             <p className='card-text'>{item.description}</p>
                             <h4>${item.price}</h4>
-                            <ItemCount/>
+                            <ItemCount addItem={addItem}/>
                         </div>
                     </div>
                 </div>

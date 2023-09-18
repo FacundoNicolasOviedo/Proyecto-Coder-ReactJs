@@ -26,13 +26,15 @@ const ItemCount = (item) => {
     return (
         <div>
             <div className="estiloContador">
+            <button className='botonReducir' onClick={reducir}>
+                    -
+                </button>
+              
+                <h2 className='cantidad'>{count}</h2>
                 <button className='botonAumentar' onClick={aumentar}>
                     +
                 </button>
-                <h2 className='cantidad'>{count}</h2>
-                <button className='botonReducir' onClick={reducir}>
-                    -
-                </button>
+               
             </div>
             <div>
                 <button

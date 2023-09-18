@@ -1,15 +1,15 @@
 .botonAumentar{
     height: 100%;
     width: 35px;
-    
+    margin-left: 50px;
 }
 .botonReducir{
     height: 100%;
     width: 35px;
-    margin-left: 150px;
+    
 }
 .cantidad{
-   margin-left: 100px;
+   margin-left: 50px;
 }
 .estiloContador{
    text-align: center;

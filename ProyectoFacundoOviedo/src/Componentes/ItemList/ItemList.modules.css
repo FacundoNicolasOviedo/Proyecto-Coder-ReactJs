@@ -1,35 +1,36 @@
-.estiloTituloItems{
+.estiloTituloItems {
     color: rgb(209, 37, 37);
     text-align: center;
     margin-top: 25px;
     margin-bottom: 80px;
     text-decoration: underline;
 }
-.card{
-    display: flex;
-    width: 18rem;
-}
-.linksList{
+
+.linksList {
     color: red;
     text-align: center;
 }
-.estiloLink{
+
+.estiloLink {
     color: rgba(255, 0, 0, 0);
 }
-.estiloPrecio{
+
+.estiloPrecio {
     color: black;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 10px;
 }
-.estiloTitulo{
+
+.estiloTitulo {
     color: black;
     font-family: cursive;
     text-align: center;
     margin-top: 25px;
 }
-.estiloCategoria{
-margin-top: 25px;
-color: black;
-text-align: center;
+
+.estiloCategoria {
+    margin-top: 25px;
+    color: black;
+    text-align: center;
 }
