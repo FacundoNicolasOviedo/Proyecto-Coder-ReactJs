@@ -1,11 +1,9 @@
-import { useContext, useState } from "react";
-import { CartContext } from "../../Context/CartProvider";
+import { useState } from "react";
 import "./ItemCount.modules.css"
 
-const ItemCount = (item) => {
-    const { addItem } = useContext(CartContext);
+const ItemCount = ({ initial, stock }) => {
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(initial);
 
     function aumentar() {
         if (count < 10) {
@@ -26,23 +24,19 @@ const ItemCount = (item) => {
     return (
         <div>
             <div className="estiloContador">
-            <button className='botonReducir' onClick={reducir}>
+                <button className='botonReducir' disabled={count <= 1} onClick={reducir}>
                     -
                 </button>
-              
+
                 <h2 className='cantidad'>{count}</h2>
-                <button className='botonAumentar' onClick={aumentar}>
+
+                <button className='botonAumentar' disabled={count >= stock} onClick={aumentar}>
                     +
                 </button>
-               
             </div>
-            <div>
-                <button
-                    onClick={() => addItem(item, 1)}
-                    className='btn btn-primary mt-3 mb-2'>
-                    Agregar al carrito
-                </button>
-            </div>
+
+           
+
         </div>
     );
 };

@@ -12,17 +12,6 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
 
-        console.log(cart)
-
-    const cantidadTotal = () => {
-        const cantidadTotal = cart.reduce(
-            (total, item) => total + item.cantidad,
-            0
-        );
-
-        return cantidadTotal;
-    };
-
     const isInCart = (id) => {
         const itemInCart = cart.find((item) => item.id === id);
         return !!itemInCart;
@@ -66,7 +55,6 @@ const CartProvider = ({ children }) => {
                 removeItem,
                 clearCart,
                 isInCart,
-                cantidadTotal,
             }}>
             {children}
         </CartContext.Provider>
