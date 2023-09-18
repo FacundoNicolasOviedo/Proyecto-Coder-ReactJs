@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProduct } from "../../Services"
 import ItemDetail from "./ItemDetail"
+import CartProvider from '../../Context/CartProvider'
 
 const ItemDetailContainer = () => {
   const [Item, setItem] = useState(null);
   const { id } = useParams()
+
+  const addItem = useContext(CartProvider)
+
+  console.log(addItem)
 
   useEffect(() => {
     getProduct(id).then((response) => {
@@ -18,7 +23,7 @@ const ItemDetailContainer = () => {
 
 
   return (
-    <ItemDetail item={Item} />
+    <ItemDetail item={Item} addItem={addItem} />
   )
 }
 

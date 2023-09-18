@@ -1,7 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import CartProvider from "../../Context/CartProvider"
 
 
-const [count, setCount] = useState(0)
+const ItemCount = (item) => {
+
+
+    const {addItem} = useContext(CartProvider)
+    
+
+    const [count, setCount] = useState(0)
+
 function aumentar() {
 
     if (count < 10) {
@@ -31,6 +39,8 @@ return (
 
 )
 
+
+}
 
 
 export default ItemCount
