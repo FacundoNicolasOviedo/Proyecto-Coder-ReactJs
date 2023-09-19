@@ -7,5 +7,4 @@ const Cart = ({item}) => {
     </card>
   )
 }
-
 export default Cart
