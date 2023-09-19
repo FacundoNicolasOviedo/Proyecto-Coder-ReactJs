@@ -15,11 +15,11 @@ const cart = () => {
   return (
     <div>
       {
-        cart.map(product => <ItemCart key={product.id} product={product} />)
+        cart.map(item => <ItemCart key={item.id} item={item} />)
       }
 
 
-      <h3>total: {totalPrice()}</h3>
+      <h3 className='estiloTotal'>Total: {totalPrice()}</h3>
 
     </div>
   )
