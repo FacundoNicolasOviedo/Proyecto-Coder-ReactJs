@@ -29,7 +29,7 @@ const CartProvider = ({ children }) => {
                 }
                 return item;
             });
-            setCart([newCart]);
+            setCart(newCart);
         } else {
             setCart([...cart, { ...product, quantity }]);
         }
@@ -44,8 +44,13 @@ const CartProvider = ({ children }) => {
         setCart([]);
     };
 
+    const totalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+    }
 
-
+    const totalProducts = () => { 
+        return cart.reduce((accumulator, actualProduct) => accumulator + actualProduct.quantity, 0)
+    }
 
     return (
         <CartContext.Provider
@@ -55,6 +60,9 @@ const CartProvider = ({ children }) => {
                 removeItem,
                 clearCart,
                 isInCart,
+                totalPrice,
+                totalProducts,
+                cart,
             }}>
             {children}
         </CartContext.Provider>

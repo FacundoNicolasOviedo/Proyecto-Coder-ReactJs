@@ -7,16 +7,16 @@ import { CartContext } from '../../Context/CartProvider';
 
 
 const ItemDetail = ({ item }) => {
-    
+
     const [goToCart, setGoToCart] = useState(false)
     const { addItem } = useContext(CartContext)
 
 
-   const onAdd = (quantity) => {
-    setGoToCart(true)
-    addItem(item, quantity)
-     
-   }
+    const onAdd = (quantity) => {
+        setGoToCart(true)
+        addItem(item, quantity)
+
+    }
 
     if (!item) {
         return null;
@@ -24,9 +24,10 @@ const ItemDetail = ({ item }) => {
 
     return (
         <div>
+
             <h1 className='tituloDetail'>Descripción del producto</h1>
 
-            <div className="estiloCardDetail card mb-3">
+            <div className="estiloCardDetail">
                 <div className="row g-0">
                     <div className="col-md-12">
                         <img src={item.imageId} className="imagen" alt="" />
@@ -40,11 +41,11 @@ const ItemDetail = ({ item }) => {
                         </div>
                         <ItemCount initial={1} stock={10} onAdd={onAdd}
                         />
-                         <button onClick={() => addItem(item, 1)} className='botonAgregar btn btn-primary mt-3 mb-2'> Agregar al carrito</button>
                     </div>
                 </div>
             </div>
         </div>
+
 
 
     )

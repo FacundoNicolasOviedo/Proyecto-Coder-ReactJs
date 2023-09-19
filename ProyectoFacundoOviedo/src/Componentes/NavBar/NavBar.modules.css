@@ -1,6 +1,7 @@
 .estiloNavbar{
     display: flex;
     background-color: rgba(82, 80, 80, 0.267);
+    position: sticky
 }
 .estiloTituloLogo{
     font-size: 2.4rem;

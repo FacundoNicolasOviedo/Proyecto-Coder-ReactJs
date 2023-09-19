@@ -5,10 +5,10 @@ import { Link, NavLink } from "react-router-dom"
 
 
 const NavBar = () => {
-    
 
 
-   
+
+
     return (
         <div>
             <nav className="estiloNavbar">
@@ -28,7 +28,9 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div>
-                    <CartWidget/>
+                    <NavLink to ="/cart">
+                        <CartWidget />
+                    </NavLink>
                 </div>
             </nav>
         </div>
