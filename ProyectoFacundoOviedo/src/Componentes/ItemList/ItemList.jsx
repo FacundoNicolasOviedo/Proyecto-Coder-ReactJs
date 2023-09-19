@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-const ItemList = ({ items, addItem }) => {
+const ItemList = ({ items }) => {
 
 
   return (

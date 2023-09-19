@@ -1,9 +1,16 @@
 .estiloTituloNegativo{
     margin-top: 40px;
-    color: red;
+    color: rgb(209, 37, 37);
     text-align: center;
 }
 
 .estiloTotal{
-    color: red;
+    margin-left: 210px;
+}
+
+.estiloTituloCart{
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(209, 37, 37);
+    margin-bottom: 50px;
 }

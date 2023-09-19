@@ -5,22 +5,37 @@ import "./Cart.modules.css"
 
 const cart = () => {
 
-  const { cart, totalPrice } = useContext(CartContext);
+  const { cart, totalPrice, clearCart } = useContext(CartContext);
 
   if (cart.length === 0) {
     return (
       <h1 className='estiloTituloNegativo'>No hay elementos en el carrito</h1>
     )
-  } 
+  }
   return (
     <div>
-      {
-        cart.map(item => <ItemCart key={item.id} item={item} />)
-      }
+      <h1 className='estiloTituloCart'>Tus productos</h1>
+      <div>
+        {
+          cart.map(item => <ItemCart key={item.id} item={item} />)
+        }
 
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <button className='btn btn-success'>Finalizar compra</button>
+            </div>
 
-      <h3 className='estiloTotal'>Total: {totalPrice()}</h3>
+            <div className='col'>
+              <button className='btn btn-warning' onClick={clearCart}>Vaciar carrito</button>
+            </div>
 
+            <div className='col'>
+              <h3 className='estiloTotal'>Total: ${totalPrice()}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

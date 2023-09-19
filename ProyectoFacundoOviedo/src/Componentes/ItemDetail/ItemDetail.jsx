@@ -30,7 +30,7 @@ const ItemDetail = ({ item }) => {
             <div className="estiloCardDetail">
                 <div className="row g-0">
                     <div className="col-md-12">
-                        <img src={item.imageId} className="imagen" alt="" />
+                        <img src={item.imageId} className="imagenDetail" alt="" />
                     </div>
                     <div class="col-md-8">
                         <div className='card-body'>

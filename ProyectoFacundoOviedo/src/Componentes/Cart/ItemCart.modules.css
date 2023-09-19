@@ -1,3 +1,25 @@
 .imagen{
-    font-size: 10px;
+    width:100px;
+}
+
+.tituloCart{
+ margin-top: 60px;
+ margin-left: 10px;  
+}
+
+.botonRemover{
+    margin-top: 60px;
+}
+.tituloCartCategory{
+    margin-top: 60px;
+   margin-left: 70px;
+}
+
+.tituloCartCantidad{
+    margin-top: 60px;
+   margin-left: 70px;
+}
+.tituloCartPrice{
+    margin-top: 60px;
+   margin-left: 50px;
 }
