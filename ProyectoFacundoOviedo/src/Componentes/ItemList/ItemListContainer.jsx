@@ -1,9 +1,9 @@
-import {useState, useEffect, useContext} from "react"
+import {useState, useEffect} from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import { getProducts } from "../../Services"
-import { CartContext } from "../../Context/CartProvider"
-//import CartContext from "../../Context/CartContext"
+
+
 
 
 const ItemListContainer = () => {
