@@ -1,0 +1,39 @@
+.tituloCheckout{
+    margin-top: 60px;
+    color: rgb(209, 37, 37);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.tituloCart{
+    margin-top: 60px;
+    margin-left: 10px;  
+   }
+.tituloCartCategory{
+    margin-top: 60px;
+   margin-left: 70px;
+}
+
+.tituloCartCantidad{
+    margin-top: 60px;
+   margin-left: 70px;
+}
+.tituloCartPrice{
+    margin-top: 60px;
+   margin-left: 50px;
+}
+.estiloTotalCheckout{
+    font-size: 2.3rem;
+    margin-top: 50px;
+    text-align: center;
+}
+.tituloFormulario{
+    color: rgb(209, 37, 37);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+.estiloBotonCheckout{
+    margin-top: 50px;
+    margin-left: 900px;
+}
+

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../Context/CartProvider'
 import ItemCart from './ItemCart';
 import "./Cart.modules.css"
+import { NavLink } from 'react-router-dom';
 
 const cart = () => {
 
@@ -22,17 +23,19 @@ const cart = () => {
 
         <div className='container'>
           <div className='row'>
-            <div className='col'>
-              <button className='btn btn-success'>Finalizar compra</button>
-            </div>
+              <NavLink to="/checkout">
+                <div className='col'>
+                  <button className='btn btn-success'>Ir al Checkout</button>
+                </div>
+              </NavLink>
 
-            <div className='col'>
-              <button className='btn btn-warning' onClick={clearCart}>Vaciar carrito</button>
-            </div>
+              <div className='col'>
+                <button className='botonVaciar btn btn-warning' onClick={clearCart}>Vaciar carrito</button>
+              </div>
 
-            <div className='col'>
-              <h3 className='estiloTotal'>Total: ${totalPrice()}</h3>
-            </div>
+              <div className='col'>
+                <h3 className='estiloTotal'>Total: ${totalPrice()}</h3>
+              </div>
           </div>
         </div>
       </div>

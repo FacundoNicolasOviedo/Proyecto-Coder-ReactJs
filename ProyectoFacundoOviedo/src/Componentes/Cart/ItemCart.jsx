@@ -24,7 +24,7 @@ const ItemCart = ({ item }) => {
                         className="tituloCartPrice">${item.price}</h4>
                 </div>
                 <div className="col">
-                    <h4 className="tituloCartCantidad">{item.quantity}</h4>
+                    <h4 className="tituloCartCantidad">X{item.quantity}</h4>
                 </div>
                 <div className="col">
                     <button className="botonRemover btn btn-danger" onClick={() => removeItem(item.id)}>Eliminar Producto</button>
