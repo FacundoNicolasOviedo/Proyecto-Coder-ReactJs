@@ -2,7 +2,7 @@
     color: rgb(209, 37, 37);
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 .estiloCardDetail{
     margin-left: 800px;
@@ -21,4 +21,10 @@
 }
 .botonAgregar{
     margin-left: 40px;
+}
+.estiloPriceDetail{
+    text-align: center;
+}
+.estiloContador{
+    margin-left: 160px;
 }

@@ -27,9 +27,9 @@ const ItemDetail = ({ item }) => {
 
             <h1 className='tituloDetail'>Descripción del producto</h1>
 
-            <div className="estiloCardDetail">
-                <div className="row g-0">
-                    <div className="col-md-12">
+            <div className="container">
+                <div className="row">
+                    <div className="col mb-3">
                         <img src={item.imageId} className="imagenDetail" alt="" />
                     </div>
                     <div class="col-md-8">
@@ -37,10 +37,11 @@ const ItemDetail = ({ item }) => {
                             <h3 className='tituloDetalle card-title'>{item.title}</h3>
                             <h4 className='card-title'>{item.categorId}</h4>
                             <p className='card-text'>{item.description}</p>
-                            <h4>${item.price}</h4>
+                            <h3 className='estiloPriceDetail'>${item.price}</h3>
                         </div>
-                        <ItemCount initial={1} stock={10} onAdd={onAdd}
-                        />
+                        <div className='estiloContador'>
+                            <ItemCount initial={1} stock={10} onAdd={onAdd} />
+                        </div>
                     </div>
                 </div>
             </div>

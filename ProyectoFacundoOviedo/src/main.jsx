@@ -8,13 +8,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBnBuGXpwXmH6Xc8X09RirGVvYvrSfQrrI",
-  authDomain: "proyectofacundooviedoreact.firebaseapp.com",
+  apiKey: import.meta.env.VITE_FIRESTORE_API_KEY,
+  authDomain: import.meta.env.VITE_FIRESTORE_AUTH_DOMAIN,
   projectId: "proyectofacundooviedoreact",
-  storageBucket: "proyectofacundooviedoreact.appspot.com",
-  messagingSenderId: "941237792673",
-  appId: "1:941237792673:web:481c5a5acf08d709b6a5e0"
+  storageBucket: import.meta.env.VITE_FIRESTORE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIRESTORE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIRESTORE_APP_ID
 };
 
 

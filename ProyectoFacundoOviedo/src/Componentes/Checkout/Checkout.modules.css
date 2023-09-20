@@ -4,6 +4,12 @@
     text-align: center;
     margin-bottom: 40px;
 }
+.tituloOrder{
+    margin-top: 60px;
+    color: rgb(209, 37, 37);
+    text-align: center;
+    margin-bottom: 40px;
+}
 .tituloCart{
     margin-top: 60px;
     margin-left: 10px;  
@@ -36,4 +42,11 @@
     margin-top: 50px;
     margin-left: 900px;
 }
-
+.estiloConfirmacion{
+    font-family: cursive;
+    text-align: center;
+}
+.botonVolver{
+    margin-left: 550px;
+    margin-top: 50px;
+}

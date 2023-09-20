@@ -6,7 +6,7 @@ import "./app.modules.css"
 import CartProvider from "./Context/CartProvider"
 import Checkout from "./Componentes/Checkout/Checkout"
 import Cart from "./Componentes/Cart/Cart"
-import SuccessfullOrder from "./Componentes/Checkout/SuccessfullOrder"
+
 
 
 
@@ -34,7 +34,6 @@ function App() {
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />}/>
-        <Route path="/successfullOrder" element={<SuccessfullOrder />}/>
       </Routes>
       
     </CartProvider>
