@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import { CartContext } from "../../Context/CartProvider"
 import "./checkout.modules.css"
 import {addDoc, getFirestore, collection, serverTimestamp} from "firebase/firestore";
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -134,7 +135,9 @@ const Checkout = () => {
           </div>
         </form>
       </div>
+      <NavLink to="/successfullOrder">
       <button className='estiloBotonCheckout btn btn-primary'>Finalizar Compra</button>
+      </NavLink>
     </div>
   )
 }
