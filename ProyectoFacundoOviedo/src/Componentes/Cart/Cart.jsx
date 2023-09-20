@@ -25,7 +25,7 @@ const cart = () => {
           <div className='row'>
               <NavLink to="/checkout">
                 <div className='col'>
-                  <button className='btn btn-success'>Ir al Checkout</button>
+                  <button className='botonCheckout btn btn-success'>Ir al Checkout</button>
                 </div>
               </NavLink>
 

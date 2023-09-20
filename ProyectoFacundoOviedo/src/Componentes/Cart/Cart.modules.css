@@ -5,7 +5,7 @@
 }
 
 .estiloTotal{
-    margin-left: 420px;
+    margin-left: 410px;
 }
 
 .estiloTituloCart{
@@ -17,4 +17,8 @@
 
 .botonVaciar{
     margin-left: 500px;
+}
+.botonCheckout{
+    margin-top: 10px;
+    
 }

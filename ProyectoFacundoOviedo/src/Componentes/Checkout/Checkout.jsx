@@ -116,20 +116,20 @@ const Checkout = () => {
       <div className='container'>
         <h2 className='tituloFormulario'>Coloque sus datos para terminar</h2>
         <form onSubmit={handleSubmit} className="form-floating">
-          <input type="text" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="name" name="name"></input>
+          <input type="text" onChange={handleInputChange} className="form-control border border-dark" id="floatingPassword" placeholder="name" name="name"></input>
           <label htmlFor="floatingPassword">Nombre completo</label>
           <br />
           <div class="form-floating mb-4">
-            <input type="email" onChange={handleInputChange} class="form-control" id="floatingInput" placeholder="name@example.com" name="email"></input>
+            <input type="email" onChange={handleInputChange} className="form-control border border-dark" id="floatingInput" placeholder="name@example.com" name="email"></input>
             <label htmlFor="floatingInput">Mail</label>
           </div>
           <div className="form-floating">
-            <input type="text" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="phone" name="phone"></input>
+            <input type="text" onChange={handleInputChange} className="form-control border border-dark" id="floatingPassword" placeholder="phone" name="phone"></input>
             <label htmlFor="floatingPassword">Teléfono</label>
           </div>
           <br />
           <div className="form-floating">
-            <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <select className="form-select border border-dark" id="floatingSelect" aria-label="Floating label select example">
               <option value="1">Tarjeta de débito</option>
               <option value="2">Tarjeta de crédito</option>
               <option value="3">Transferencia Bancaria</option>
