@@ -1,9 +1,8 @@
 import React from 'react'
 import { useContext, useState } from 'react'
 import { CartContext } from "../../Context/CartProvider"
-import "./checkout.modules.css"
+import "./Checkout.modules.css"
 import {addDoc, getFirestore, collection, serverTimestamp} from "firebase/firestore";
-import { NavLink } from 'react-router-dom';
 
 
 
@@ -17,7 +16,7 @@ const Checkout = () => {
 
   const [orderId, setOrderId] = useState(null);
 
-  const { cart, totalPrice } = useContext(CartContext)
+  const { cart, totalPrice, clearCart } = useContext(CartContext)
 
 
   const handleInputChange = (e) => {
@@ -29,8 +28,8 @@ const Checkout = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    createOrder();
+    e.preventDefault()
+    createOrder()
   };
 
 
@@ -46,8 +45,8 @@ const Checkout = () => {
         name: item.title,
         id: item.id,
         price: item.price,
-        date: serverTimestamp()
       })),
+      date: serverTimestamp()
     };
 
     const db = getFirestore();
@@ -56,90 +55,86 @@ const Checkout = () => {
 
     addDoc(ordersCollection, orderData)
     .then((docRef) => {
-      console.log('orden creada con id: ', docRef.id);
-      setOrderId(docRef.id);
+      setOrderId(docRef.id)
+      clearCart()
     })
     .catch((error) => {
       console.log(error);
-    });
-
-  
-
-    useEffect(() => {
-      return () => {
-        if (orderId) {
-          clearCart();
-        }
-      };
-    }, [orderId]);
-  
-
-  
-
-   
+    })
 };
 
-
-
-  return (
+if(orderId){
+  return(
     <div>
-      <h1 className='tituloCheckout'>Resumen de la compra</h1>
       <div>
-        {cart.map((item) => (
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <h4 className="tituloCart">{item.title}</h4>
-              </div>
-              <div className="col">
-                <h4
-                  className="tituloCartCategory">{item.categoryId}</h4>
-              </div>
-              <div className="col">
-                <h4
-                  className="tituloCartPrice">${item.price}</h4>
-              </div>
-              <div className="col">
-                <h4 className="tituloCartCantidad">X{item.quantity}</h4>
-              </div>
-              <hr />
+                <h1 className='tituloOrder'>Tu compra ha sido exitosa</h1>
             </div>
-          </div>
-        ))}
-        <div className='col'>
-          <h3 className='estiloTotalCheckout'>Total: ${totalPrice()}</h3>
-        </div>
-      </div>
-      <div className='container'>
-        <h2 className='tituloFormulario'>Coloque sus datos para terminar</h2>
-        <form onSubmit={handleSubmit} className="form-floating">
-          <input type="text" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="name"></input>
-          <label for="floatingPassword">Nombre completo</label>
-          <br />
-          <div class="form-floating mb-4">
-            <input type="email" onChange={handleInputChange} class="form-control" id="floatingInput" placeholder="name@example.com"></input>
-            <label for="floatingInput">Mail</label>
-          </div>
-          <div className="form-floating">
-            <input type="name" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="phone"></input>
-            <label for="floatingPassword">Teléfono</label>
-          </div>
-          <br />
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option value="1">Tarjeta de débito</option>
-              <option value="2">Tarjeta de crédito</option>
-              <option value="3">Transferencia Bancaria</option>
-            </select>
-            <label for="floatingSelect">Método de pago</label>
-          </div>
-        </form>
-      </div>
-      <NavLink to="/successfullOrder">
-      <button className='estiloBotonCheckout btn btn-primary'>Finalizar Compra</button>
-      </NavLink>
+            <div className='container'>
+            <div className='card'>
+              <h1>Perfecto {formData.name} su N°de orden es: {orderId}</h1>
+            </div>
+            </div>
     </div>
   )
+}
+
+return (
+  <div>
+    <h1 className='tituloCheckout'>Resumen de la compra</h1>
+    <div>
+      {cart.map((item) => (
+        <div className="container" key={item.id}>
+          <div className="row">
+            <div className="col">
+              <h4 className="tituloCart">{item.title}</h4>
+            </div>
+            <div className="col">
+              <h4
+                className="tituloCartCategory">{item.categoryId}</h4>
+            </div>
+            <div className="col">
+              <h4
+                className="tituloCartPrice">${item.price}</h4>
+            </div>
+            <div className="col">
+              <h4 className="tituloCartCantidad">X{item.quantity}</h4>
+            </div>
+            <hr />
+          </div>
+        </div>
+      ))}
+      <div className='col'>
+        <h3 className='estiloTotalCheckout'>Total: ${totalPrice()}</h3>
+      </div>
+    </div>
+    <div className='container'>
+      <h2 className='tituloFormulario'>Coloque sus datos para terminar</h2>
+      <form onSubmit={handleSubmit} className="form-floating">
+        <input type="text" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="name" name="name"></input>
+        <label htmlFor="floatingPassword">Nombre completo</label>
+        <br />
+        <div class="form-floating mb-4">
+          <input type="email" onChange={handleInputChange} class="form-control" id="floatingInput" placeholder="name@example.com" name="email"></input>
+          <label htmlFor="floatingInput">Mail</label>
+        </div>
+        <div className="form-floating">
+          <input type="text" onChange={handleInputChange} class="form-control" id="floatingPassword" placeholder="phone" name="phone"></input>
+          <label htmlFor="floatingPassword">Teléfono</label>
+        </div>
+        <br />
+        <div className="form-floating">
+          <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option value="1">Tarjeta de débito</option>
+            <option value="2">Tarjeta de crédito</option>
+            <option value="3">Transferencia Bancaria</option>
+          </select>
+          <label htmlFor="floatingSelect">Método de pago</label>
+        </div>
+        <button onClick={clearCart} className='estiloBotonCheckout btn btn-primary' type='submit'>Finalizar Compra</button>
+      </form>
+    </div>
+  </div>
+)
 }
 
 export default Checkout
