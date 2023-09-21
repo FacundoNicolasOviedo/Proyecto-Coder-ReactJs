@@ -1,8 +1,6 @@
-# React + Vite
+# Bienvenido a Tennis Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tennis Center** es tu destino de confianza para todas tus necesidades relacionadas con el tenis. Nos enorgullece ofrecer una amplia gama de raquetas de tenis de alta calidad que se adaptan a jugadores de todos los niveles, desde principiantes hasta profesionales.
 
-Currently, two official plugins are available:
+En **Tennis Center**, comprendemos la importancia de la raqueta de tenis como una extensión de tu juego. Por eso, nos dedicamos a proporcionar productos de primera calidad que te ayudarán a alcanzar tu máximo potencial en la cancha. Nuestras raquetas son cuidadosamente seleccionadas de las principales marcas del mercado, conocidas por su innovación y rendimiento excepcionales.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
